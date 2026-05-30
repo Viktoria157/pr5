@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}  % Тип документа (стаття) та розмір шрифту (12pt)
+\usepackage[T2A]{fontenc}      % Кодування шрифтів для відображення кирилиці
+\usepackage[utf8]{inputenc}    % Кодування вхідного файлу (стандарт для укр.мови)
+\usepackage[ukrainian]{babel}  % Підключення словників та правил переносу укр.мови
+\usepackage{amsmath, amssymb}  % Пакети для математичних формул та символів
+\usepackage{array}             % Пакет для покращеної роботи з таблицями
+
+\title{Практична робота: Математичні формули} 
+\author{Бондар Наталія}                          
+\date{\today}                                
+
+\begin{document} % Початок тексту документа
+
+\maketitle % Команда, яка фактично малює заголовок, автора та дату на сторінці
+\section*{Квадратне рівняння}
+
+Квадратне рівняння має вигляд:
+\begin{equation}
+ax^2 + bx +c = 0, \quad a \neq 0
+\end{equation}
+Його розв'язки залежать від значення дискримінінта $D$. Нижче наведено узагальнюючу таблицю:
+\begin{table}[h]
+\centering
+\renewcommand{\arraystretch}{3}
+\begin{tabular}{|c|c|c|}
+\hline
+\multicolumn{3}{|c|}{$ax^2 + bx + c = 0, a \neq 0, b \neq 0, c \neq 0$}\\ \hline
+\multicolumn{3}{|c|}{$D = b^2 - 4ac$}\\ \hline
+$\begin{aligned}
+    x_1 &= \frac{-b + \sqrt{D}}{2a} \\
+    x_2 &= \frac{-b - \sqrt{D}}{2a}
+\end{aligned}$ &
+$x = -\dfrac{b}{2a}$ &
+коренів немає \\ \hline
+\end{tabular}
+\end{table}
+\section*{Приклад розв'яхання}
+Розв'яжемо рівняння $2x^2 - 4x - 6 = 0$:
+\begin{align*}
+a &= 2, \quad b = -4, \quad c = -6\\
+D &= (-4)^2 - 4 \cdot 2 \cdot (-6) = 16 + 48 = 64\\
+x &= \frac{-(-4)\pm \sqrt{64}}{2 \cdot 2} \\
+x &=\frac{4 \pm 8}{4} \\
+x_1 &= \frac{12}{4} = 3, \quad x_2 &= \frac{-4}{4} = -1
+\end{align*}
+
+\end{document} % Кінець документа
